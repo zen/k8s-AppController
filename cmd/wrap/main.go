@@ -44,7 +44,7 @@ func getKind(k8sObject string) (string, error) {
 }
 
 func getWrappedYaml(k8sObject, name string) (string, error) {
-	base := `apiVersion: appcontroller.k8s2/v1alpha1
+	base := `apiVersion: appcontroller.k8s/v1alpha1
 kind: Definition
 metadata:
   name: ` + name + "\n"

@@ -94,7 +94,7 @@ func TestWrap(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	expected := `apiVersion: appcontroller.k8s2/v1alpha1
+	expected := `apiVersion: appcontroller.k8s/v1alpha1
 kind: Definition
 metadata:
   name: name
