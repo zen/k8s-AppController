@@ -33,6 +33,7 @@ Resource Definitions are (the same as Dependencies) ThirdPartyResource API exten
 [![asciicast](https://asciinema.org/a/c4ujuq2f8mv1cl16h0u5x0sl1.png)](https://asciinema.org/a/c4ujuq2f8mv1cl16h0u5x0sl1)
 
 [Voice demo from sig-apps meeting](https://youtu.be/BXRToNV4Rdw?t=178)
+
 [Voice demo from kubernetes community meeting](https://youtu.be/NzkoocVeFMQ?t=31)
 
 # Usage
@@ -93,3 +94,50 @@ Start appcontroller process:
 You can stop appcontroller process by:
 
 `kubectl exec k8s-appcontroller ac-stop`
+
+# Development
+
+We use github to manage AppController project, so please follow usual github workflow: clone, branch, code, request pull.
+
+We also use [Waffle.io](http://waffle.io/Mirantis/k8s-AppController) to track our progress. Feel free to create issues for functionality we are missing
+
+[![Throughput Graph](https://graphs.waffle.io/Mirantis/k8s-AppController/throughput.svg)](https://waffle.io/Mirantis/k8s-AppController/metrics/throughput)
+
+##Roadmap
+
+We are currently working on support for all Kubernetes objects. Next steps will include:
+
+* better UX
+* chaining dependency graphs
+* cooperation with [Helm](https://github.com/kubernetes/helm) project
+
+Detailed roadmap is being still being discussed.
+
+##Release schedule
+
+AppController is being released every 3 weeks based on readiness.
+
+### AppController 0.1 alpha
+
+Release date (planned): **14.10.2016**
+
+Planned features:
+
+* Basic functionality completed
+* Support for Jobs, Pods, Services, Replica Sets, Pet Sets, Daemon Sets
+* Support for dependencies on already existing objects
+* Basic CLI
+* Reporting on deployment progress
+* Basic control over deployment process (start, stop, resume)
+* Compliance with Kubernetes incubator repo structure
+* Basic graphical graph builder
+
+### AppController 0.2
+
+Release date (planned): 04.11.2016
+
+Planned features:
+
+* Improvements of graph visualisation
+* Better failure handling (ability for user to define action of failure)
+* Extended logic for handling cases like automatic slave promotion after failure
